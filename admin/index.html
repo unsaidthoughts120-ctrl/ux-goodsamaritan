@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UX Admin Panel</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="login-page" id="loginPage">
+
+<div class="login-card">
+
+<h1>UX <span>ADMIN</span></h1>
+<p class="sub">Administrator Access</p>
+
+<input id="loginUser" class="finput" placeholder="Username">
+
+<br><br>
+
+<input id="loginPass" type="password" class="finput" placeholder="Password">
+
+<br><br>
+
+<button class="btn btn-p" onclick="loginAdmin()">Sign In</button>
+
+</div>
+</div>
+
+
+<!-- ADMIN PANEL -->
+<div class="admin-wrap" id="adminPanel" style="display:none">
+
+<div class="admin-side">
+
+<div class="admin-brand">
+<h2>UX <span>ADMIN</span></h2>
+<p>Video Dashboard</p>
+</div>
+
+<div class="aside-item active">Videos</div>
+
+<hr class="aside-divider">
+
+<div class="aside-item danger" onclick="logout()">Logout</div>
+
+</div>
+
+
+<div class="admin-main">
+
+<div class="admin-topbar">
+<h1>Video Manager</h1>
+</div>
+
+<div class="admin-body">
+
+<!-- ADD / EDIT FORM -->
+<div class="aform">
+
+<h3>Add / Edit Video</h3>
+
+<div class="fgrid">
+
+<div class="fg fw">
+<label class="flbl">Video Title</label>
+<input id="videoTitle" class="finput">
+</div>
+
+<div class="fg fw">
+<label class="flbl">Video Link</label>
+<input id="videoLink" class="finput">
+</div>
+
+<div class="fg fw">
+<label class="flbl">Description</label>
+<textarea id="videoDesc" class="ftxt"></textarea>
+</div>
+
+</div>
+
+<br>
+
+<button class="btn btn-p" onclick="saveVideo()">Save Video</button>
+
+</div>
+
+
+<!-- VIDEO TABLE -->
+<div class="atable-wrap">
+
+<div class="atable-head">
+<h3>All Videos</h3>
+</div>
+
+<table class="atable">
+
+<thead>
+<tr>
+<th>Title</th>
+<th>Views</th>
+<th>Featured</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="videoTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
